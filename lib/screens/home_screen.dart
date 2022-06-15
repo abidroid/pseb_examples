@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pseb_examples/screens/stf_four.dart';
 import 'package:pseb_examples/screens/stf_one.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -25,7 +26,16 @@ class _HomeScreenState extends State<HomeScreen> {
                 return const StfOne();
               }));
             },
-          )
+          ),
+          ListTile(
+            leading: const Text('2'),
+            title: const Text('Stateful example 4'),
+            onTap: (){
+              Navigator.of(context).push(MaterialPageRoute(builder: (context){
+                return const StfFour();
+              }));
+            },
+          ),
         ],
       ),
     );
